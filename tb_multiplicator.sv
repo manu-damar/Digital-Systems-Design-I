@@ -37,22 +37,22 @@ module tb_multiplicator;
   
   
   always @(sync) begin		//Process 1
+    a = $urandom;
     if (sync == 3) begin
-    	a = $urandom;
     	$write("Process 1. A: %4d,   0b%b\n", a, a);
     end
   end 
   
   always @(sync) begin		//Process 2
+    b = $urandom;
     if (sync == 2) begin
-    	b = $urandom;
     	$write("Process 2. B: %4d,   0b%b\n", b, b);
     end
   end 
   
   always @(sync) begin		//Process 3
+    c = $urandom;
     if (sync == 1) begin
-    	c = $urandom;
     	$write("Process 3. C: %4d,   0b%b\n", c, c);
     end
   end
